@@ -1,0 +1,246 @@
+#startButton {
+	height: 155px;
+	width: 310px;
+	margin-top: 200px;
+	padding-left: 30px;
+	font-weight: 700;
+	font-size: 15px;
+	letter-spacing: 22px;
+	color: #383736;
+	border: 2px #383736 solid;
+	border-radius: 10px;
+	text-transform: uppercase;
+	background-image: url(Startbutton.jpeg);
+}
+#startButton.svg:hover{
+  color:white;
+  border: 0px #d19b26 solid;
+}
+#startButton.svg:hover:before {
+  opacity: .8;
+}
+#startButton.svg:hover:after {
+  top: 0;
+}
+/*fim botao start*/
+
+#stats {
+	display: none;
+
+}
+
+.Books {
+	display: none;
+}
+.Books.active {
+	display: block;
+}
+.borda {
+	display: none;
+	margin-top: 20px;
+	height: auto; 
+	vertical-align: top;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #8B4513;
+	border-bottom: auto;
+	background-color: #FFDEAD;
+	border-radius: 20px;
+}
+.like {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.dislike {
+	font-size: 12px;
+}
+html, body {
+	height: 100%;
+}
+body { 
+	background-image: url(fotoinicio.jpg); 
+}
+h1	{
+	color: 	#A0522D;
+	text-align: center;
+} 
+p {
+	color: black;
+	text-align: justify;
+}
+button {
+	color: white;
+	width: 100px;
+	height: 60px;
+}
+.Books button {
+	font-size: 12px;
+}
+.clearfix a{
+	color: 	#A0522D;
+	text-decoration: none;
+	font-size: 18px;
+	padding-bottom: 10px;
+}
+img{
+	display: block;
+	width: 150px;
+	height: 225px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+#stats img {
+	width: auto;
+}
+/*Pagina Resultados*/
+.resul {
+	display: none;
+	margin-top: 20px;
+	height: auto; 
+	vertical-align: top;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #8B4513;
+	border-bottom: auto;
+	background-color: #FFDEAD;
+	border-radius: 20px;
+	/*background-color: #D2691E;*/
+	text-align: center;
+	margin-top: 2px;
+	font-style: comic;
+	font-size: 150%;
+
+}
+.resul p {
+	text-align: center;
+	font-size: 200%;
+	background-color: ;
+	color: white;
+	padding-top: 5px; 
+}
+
+/*Animacao Titulo*/
+
+/* 3D switched off on viewports less than 993px wide to preserve ledgibility */
+a.marquee { 
+	perspective:700px;
+	font-size: 0;
+	font-family: Agency, sans-serif;
+	text-align: center;
+}
+.marquee div {
+	display: inline-block; 
+	height: 10rem; 
+	width: 30rem;
+	position: center;
+}
+.marquee div:first-of-type { 
+	background: ;
+	transform-origin: top right;
+	transform: rotateY(-40deg);
+	color: #fff;
+}
+.marquee div:last-of-type {
+	background: ;
+	transform-origin: top left;
+	transform: rotateY(45deg);
+	color: #fff;
+}
+.marquee div { 
+	font-size: 8rem;
+	overflow: hidden;
+}
+.marquee div span { 
+	position: absolute; 
+	width: 400%;	
+	line-height: 1.4;
+}
+@keyframes leftcrawl {
+	to { transform: translateX(-120rem); }
+}
+@keyframes rightcrawl {
+	to { transform: translateX(-150rem); }
+}
+.marquee div:first-of-type span {
+	transform: translateX(40rem);
+	animation: leftcrawl 12s linear infinite;
+	text-shadow: 4px 0px 4px rgba(0,0,0,0.3);
+}
+.marquee div:last-of-type span {
+	transform: translateX(10rem);
+	animation: rightcrawl 12s linear infinite;
+}
+/*Fim titula animacao*/
+
+
+/*Barra de navegacao */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+.containerNavBar {
+	padding: 2px 0;
+}
+
+.topnav a.left {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 5;
+}
+
+.topnav a.about {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 5;
+}
+
+.topnav a.activebar {
+    background-color: #4CAF50;
+    color: white;
+}
+/*Fim barra de navegacao*/
+
+/*barra links*/
+#footer {
+  border-radius: 30px;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+
+
+#footer a.left {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 5;
+}
+
+#footer a.about {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 6px 6px;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 5;
+}
+/*Fim barra links*/
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"">
+ <title>Index.html</title>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<!-- Barra de navegacao -->
+<div class="topnav containerNavBar">
+  <a class="left activebar" href="index.html">TinderBooks</a>
+  <a class="left" href="#news">News</a>
+  <a class="about" href="#contact">Login</a>
+  <a class="about" href="#about">Registo</a>
+  <!-- titulo animado -->
+  <a href="index.html" class="marquee center-block">
+    <div><span>TinderBooks: Choose Your Path</span>
+    </div>
+    <div aria-hidden="true"><span>TinderBooks: Choose Your Path</span>
+    </div>
+  </a>
+</div>
+<!-- fim titulo animado -->
+</div> 
+<!-- Fim Barra de navegacao-->
+<body>
+ <div id="startPage"><h1></h1><button id="startButton" class="center-block">Start</button>
+  <div class="col-sm-4 col-sm-offset-4 active container carousel slide myCarousel" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target=".myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target=".myCarousel" data-slide-to="1"></li>
+      <li data-target=".myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="intro3.jpeg" alt="Nome do Vento" style="width:50%;">
+      </div>
+
+      <div class="item">
+        <img src="intro2.jpg" alt="Chicago" style="width:50%;">
+      </div>
+
+      <div class="item">
+        <img src="intro1.jpg" alt="New york" style="width:50%;">
+      </div>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="borda active row col-sm-4 col-sm-offset-4">
+
+      <div id="container" class="row col-sm-10 col-sm-offset-1 bookcontainer">
+      </div>
+      <div class="clearfix row col-sm-10 col-sm-offset-1"> 
+        <button type="button" class="btn btn-success btn-lg pull-left like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Gosto</button>
+        <button type="button" " class="btn btn-danger btn-lg pull-right dislike"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>Não Gosto</button>
+      </div> 
+    </div> 
+
+    <div id="stats" class="bookhtml col-sm-4 col-sm-offset-4 resul"> 
+      <p>Livros</p>
+      <img class="resultados" src="congrats.jpg">
+      <label class="countlike"></label>
+      <label class="countdislike"></label>
+    </div>
+  </div>
+  
+</div>
+
+<script src="jquery/jquery-3.2.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+<footer id="footer" class="containerNavBar2">
+    <a class="left" href="https://www.goodreads.com/" target="blank">Goodreads</a>
+    <a class="left" href="http://www.fnac.pt/livro/h5?origin=GOOGLE_LIVROS_BD&gclid=CjwKEAjwjPXIBRDhwICRg-DbgHISJADP6QXpRHB9bkzXUZvV611-87K2sqzoRk_7vjnSLrTS1gOtuRoCJKXw_wcB" target="blank">Fnac</a>
+    <a class="about" href="https://www.amazon.co.uk/s/ref=nb_sb_noss/261-8534437-3599514?url=search-alias%3Dstripbooks&field-keywords=" target="blank">Amazon</a>
+    <a class="about" href="https://www.kobo.com/pt/pt" target="blank">Kobo</a>
+  </footer>
+</html>
