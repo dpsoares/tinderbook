@@ -10,7 +10,7 @@
 	border: 2px #383736 solid;
 	border-radius: 10px;
 	text-transform: uppercase;
-	background-image: url(Startbutton.jpeg);
+	background-image: url(startbutton.jpeg);
 }
 #startButton.svg:hover{
   color:white;
