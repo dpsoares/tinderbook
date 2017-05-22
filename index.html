@@ -2,7 +2,6 @@
 <html>
 <head>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, scale=0.5">
  <title>Index.html</title>
  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
  <link rel="stylesheet" type="text/css" href="styles.css">
@@ -58,8 +57,8 @@
       <div id="container" class="row col-sm-10 col-sm-offset-1 bookcontainer">
       </div>
       <div class="clearfix row col-sm-10 col-sm-offset-1"> 
-        <button type="button" class="btn btn-success btn-lg pull-left like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Gosto</button>
-        <button type="button" " class="btn btn-danger btn-lg pull-right dislike"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>Não Gosto</button>
+        <button type="button" data-opinion="like" class="btn btn-success btn-lg pull-left like"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Gosto</button>
+        <button type="button" data-opinion="dislike" class="btn btn-danger btn-lg pull-right dislike"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>Não Gosto</button>
       </div> 
     </div> 
 
@@ -78,6 +77,15 @@
     <a class="left" href="http://www.fnac.pt/livro/h5?origin=GOOGLE_LIVROS_BD&gclid=CjwKEAjwjPXIBRDhwICRg-DbgHISJADP6QXpRHB9bkzXUZvV611-87K2sqzoRk_7vjnSLrTS1gOtuRoCJKXw_wcB" target="blank">Fnac</a>
     <a class="about" href="https://www.amazon.co.uk/s/ref=nb_sb_noss/261-8534437-3599514?url=search-alias%3Dstripbooks&field-keywords=" target="blank">Amazon</a>
     <a class="about" href="https://www.kobo.com/pt/pt" target="blank">Kobo</a>
+    <button id="consultDb" class="consultdata">Consult Database</button>
+    <!-- search bar -->
+    <!-- <div class="containersearch pull-right">
+    <form class="searchbox">
+        <input type="search" placeholder="Search..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+        <input type="submit" class="searchbox-submit" value="GO">
+        <span class="searchbox-icon">GO</span>
+    </form>
+</div> -->
   </footer>
 
 
