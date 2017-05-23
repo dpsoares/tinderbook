@@ -251,6 +251,12 @@ a.marquee {
 	margin: 30px;
 	border-radius: 20px;
 }
+
+.box1 {
+	padding: 10px;
+}
+
+
 /*searchbar*/
 /*.containersearch{
     width:200px;

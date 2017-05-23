@@ -3,7 +3,7 @@ var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
 //obrigatório antes de qualquer operação na nossa base de dados
 db.transaction(function (tx) {
 		// elimina a tabela
-	tx.executeSql('DROP TABLE books');
+	//tx.executeSql('DROP TABLE books');
 
 	//cria a table se não existir
     tx.executeSql('CREATE TABLE IF NOT EXISTS books (id unique, opinion)');
@@ -25,7 +25,7 @@ function LoadDataWithHTML(book){
 	$("h1",$currentBook).text(book.volumeInfo.title);
 	$("p",$currentBook).text(book.volumeInfo.description);	
 	$("img",$currentBook).attr("src",book.volumeInfo.imageLinks.thumbnail);
-	$('.hiddenFieldId',$currentBook).text(book.id);
+	$(".hiddenFieldId",$currentBook).text(book.id);
 
 	var countlike = 0;
 	$(".bookhtml label.countlike").text("Gostos: " + countlike);
@@ -112,7 +112,7 @@ function LoadDataWithHTML(book){
 		$(".borda.active").show();
 	});
 };
-
+	
 	$('#consultDb').click(function(){
 	db.transaction(function (tx) {
 		//buscar todos os resultados da nossa table
@@ -120,6 +120,8 @@ function LoadDataWithHTML(book){
 	   		$.each(results.rows,function(index,item){
 	   			//output de todas as rows/todos os resultados
 				console.log(item);
+				var html = `<p>` + item.id + item.opinion + `</p>`;
+				$("#stats h4").append(html);
 			});
 		}, null);
 	});
