@@ -24,6 +24,37 @@
 </div> 
 <!-- Fim Barra de navegacao-->
 <body>
+<!--  <div id="videoPlayer" style="width:520px; -webkit-border-radius:10px; height:420px; background-color:white; position:relative; float:left; left:25px; top:55px;" align="center">
+
+    <video controls width="500" height="400" style="background-color:black; margin-top:10px; -webkit-border-radius:10px;">
+         <source src="Lego Library.mp4" type="video/mp4" />
+    </video>
+
+    <script>  
+        video.removeAttribute('controls');  
+    </script> 
+
+    <div id="vidControls" style="position:relative; width:100%; height:50px; background-color:white; -webkit-border-bottom-left-radius:10px; -webkit-border-bottom-right-radius:10px; padding-top:10px; padding-bottom:10px;">
+
+         <table width="100%" height="100%" border="0">
+
+             <tr>
+                 <td width="100%" align="center" valign="middle" colspan="4"><input class="vidPos" type="range" value="0" step="0.1" style="width:500px;" /></td>
+             </tr>
+
+             <tr>
+                 <td width="100%" align="center" valign="middle"><a href="javascript:;" class="playVid">Play</a></td>
+                 <td width="100%" align="center" valign="middle"><a href="javascript:;" class="vol">Vol</a></td>
+                 <td width="100%" align="left" valign="middle"><p class="timer"><strong>0:00</strong> / 0:00</p></td>
+                 <td width="100%" align="center" valign="middle"><a href="javascript:;" class="fullScreen">Full</a></td>
+              </tr>
+
+            </table>
+
+         </div>
+
+      </div> -->
+
  <div id="startPage"><h1></h1><button id="startButton" class="center-block">Start</button>
   <div class="col-sm-4 col-sm-offset-4 active container carousel slide myCarousel" data-ride="carousel">
     <!-- Indicators -->
@@ -53,12 +84,14 @@
     <source src="Lego Library.mp4" type="video/mp4"> 
       </video>
     </div>
+
+
   </div>
 
   <div class="container-fluid">
     <div class="row">
       <div class="borda active row col-sm-4 col-sm-offset-4">
-
+       <button id="Resultado" class="center-block">Resultados</button>
         <div id="container" class="row col-sm-10 col-sm-offset-1 bookcontainer">
         </div>
         <div class="clearfix row col-sm-10 col-sm-offset-1"> 
@@ -66,7 +99,7 @@
           <button type="button" data-opinion="dislike" class="btn btn-danger btn-lg pull-right dislike"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>Não Gosto</button>
         </div> 
       </div> 
-
+</div>
       <div id="stats" class="bookhtml col-sm-4 col-sm-offset-4 resul"> 
         <p>Livros</p>
         <img class="resultados" src="congrats.jpg">
@@ -84,14 +117,16 @@
     <a class="about" href="https://www.amazon.co.uk/s/ref=nb_sb_noss/261-8534437-3599514?url=search-alias%3Dstripbooks&field-keywords=" target="blank">Amazon</a>
     <a class="about" href="https://www.kobo.com/pt/pt" target="blank">Kobo</a>
     <button id="consultDb" class="consultdata">Consult Database</button>
-    <!-- search bar -->
-    <!-- <div class="containersearch pull-right">
-    <form class="searchbox">
-        <input type="search" placeholder="Search..." name="search" class="searchbox-input" onkeyup="buttonUp();" required>
-        <input type="submit" class="searchbox-submit" value="GO">
-        <span class="searchbox-icon">GO</span>
-    </form>
-  </div> -->
+    
+    <div class="containersearch pull-right">
+ 
+    
+   <form action="" id="search-form">
+    <fieldset>
+        <input type="text" id="search" name="search" />
+        <input type="submit" id="search-submit" value="" />
+    </fieldset>
+</form>
 </footer>
 
 

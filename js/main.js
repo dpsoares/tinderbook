@@ -3,12 +3,16 @@ var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
 //obrigatório antes de qualquer operação na nossa base de dados
 db.transaction(function (tx) {
 		// elimina a tabela
-	//tx.executeSql('DROP TABLE books');
+	tx.executeSql('DROP TABLE books');
 
 	//cria a table se não existir
     tx.executeSql('CREATE TABLE IF NOT EXISTS books (id unique, opinion)');
  });
 
+$("#Resultado").click(function(){
+			$(".borda").hide();
+			$("#stats").show();
+			}); 
 
 function LoadDataWithHTML(book){
 	var HTMLtoInsert = `
@@ -25,7 +29,7 @@ function LoadDataWithHTML(book){
 	$("h1",$currentBook).text(book.volumeInfo.title);
 	$("p",$currentBook).text(book.volumeInfo.description);	
 	$("img",$currentBook).attr("src",book.volumeInfo.imageLinks.thumbnail);
-	$(".hiddenFieldId",$currentBook).text(book.id);
+	$(".hiddenFieldId",$currentBook).text(book.volumeInfo.title);
 
 	var countlike = 0;
 	$(".bookhtml label.countlike").text("Gostos: " + countlike);
@@ -120,12 +124,15 @@ function LoadDataWithHTML(book){
 	   		$.each(results.rows,function(index,item){
 	   			//output de todas as rows/todos os resultados
 				console.log(item);
-				var html = `<p>` + item.id + item.opinion + `</p>`;
+				var html = `<p>` + item.id + " " + item.opinion + `</p>`;
 				$("#stats h4").append(html);
 			});
 		}, null);
 	});
 });
+
+
+	
 
 
 var APIKey = "AIzaSyDpvVpmWlQYfZH4D9AApOFy3wl3_5qWaIU";
@@ -144,60 +151,44 @@ $.ajax({
 });
 
 
+$("#search").val("Pesquisar...").addClass("empty");
 
+$("#search").focus(function(){
+   $(this).removeClass("empty");
+   if($(this).val() == "Pesquisar...") {
+      $(this).val("");
+   }
+});
 
+$("#search").blur(function(){
+   if($(this).val() == "") {
+      $(this).val("Pesquisar...").addClass("empty");
+   }
+});
 
-// // searchbar
-//   $(document).ready(function(){
-//             var submitIcon = $('.searchbox-icon');
-//             var inputBox = $('.searchbox-input');
-//             var searchBox = $('.searchbox');
-//             var isOpen = false;
-//             submitIcon.click(function(){
-//                 if(isOpen == false){
-//                     searchBox.addClass('searchbox-open');
-//                     inputBox.focus();
-//                     isOpen = true;
-//                 } else {
-//                     searchBox.removeClass('searchbox-open');
-//                     inputBox.focusout();
-//                     isOpen = false;
-//                 }
-//             });  
-//              submitIcon.mouseup(function(){
-//                     return false;
-//                 });
-//             searchBox.mouseup(function(){
-//                     return false;
-//                 });
-//             $(document).mouseup(function(){
-//                     if(isOpen == true){
-//                         $('.searchbox-icon').css('display','block');
-//                         submitIcon.click();
-//                     }
-//                 });
-//         });
-//             function buttonUp(){
-//                 var inputVal = $('.searchbox-input').val();
-//                 inputVal = $.trim(inputVal).length;
-//                 if( inputVal !== 0){
-//                     $('.searchbox-icon').css('display','none');
-//                 } else {
-//                     $('.searchbox-input').val('');
-//                     $('.searchbox-icon').css('display','block');
-//                 }
-//             }
+// var fullscreen = 0;
 
+// $(".fullscreen").click(function(){
+//   if(fullscreen == 0){
+//     fullscreen = 1;
+//     $("video").appendTo('body');
+//     $("#vidControls").appendTo('body');
+//     $("video").css('position', 'absolute').css('width', '100%').css('height', '90%').css('margin', 0).css('margin-top', '5%').css('top', '0').css('left', '0').css('float', 'left').css('z-index', 600);
+//     $("#vidControls").css('position', 'absolute').css('bottom', '5%').css('width', '90%').css('backgroundColor', 'rgba(150, 150, 150, 0.5)').css('float', 'none').css('left', '5%').css('z-index', 700).css('-webkit-border-radius', '10px');
 
+// }
+// else
+//     {
 
+//         fullscreen = 0;
 
+//         $("video").appendTo('#videoPlayer');
+//         $("#vidControls").appendTo('#videoPlayer');
 
+//         //change <video> css back to normal
 
+//         //change "#vidControls" css back to normal
 
+//     }
 
-
-
-
-
-
-
+// });
